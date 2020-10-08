@@ -8,7 +8,7 @@ V2RayClient --|-> Caddy -> V2RayServer -> Internet
 
 ::: tip CDN
 <!--如果有人试过可以套CF，请将括号内容删除。否则修改这一行-->
-H2 流量理论上跟 ws 一样可以被 Cloudflare 转发，记得在 dashboard 里打开 HTTP/2 开关。<sup>*（注意：笔者没有进行实际测试）*</sup>
+H2 流量理论上跟 Websocket 一样可以被 CDN 转发，但实际情况是目前大部分的CDN都不支持H2回源，所以当前如果要使用CDN，还是要使用 WS 协议。
 :::
 
 ## 缺陷
