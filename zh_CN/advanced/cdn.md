@@ -1,6 +1,7 @@
 # CDN
 
-目前和 V2Ray 兼容的 CDN 国外有 Cloudflare，国内阿里云，这两家的 CDN 是支持 WebSocket 的。剩下的几家不支持 WebSocket，也不会 keep TCP connection。因此 HTTP/2 回源也不支持（访问支持 HTTP/2 和回源支持 HTTP/2 是两回事）。
+目前和 V2Ray 兼容的 CDN 国外有 Cloudflare，国内阿里云全站加速，这两家的 CDN 是支持 WebSocket 的。但是 HTTP/2 回源也是不支持的（访问支持 HTTP/2 和回源支持 HTTP/2 是两回事）。
+VLESS（Beta）协议目前没有开启加密功能，请不要使用VLESS/WS(TLS)等配置使用国内CDN。
 另外，使用国内 CDN 需要域名备案并服务商*实名*认证。使用有风险，入坑需谨慎。
 
 ## 配置
