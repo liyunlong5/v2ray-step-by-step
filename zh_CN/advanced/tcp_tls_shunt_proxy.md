@@ -106,6 +106,8 @@ vhosts:
 
 相比 TCP，Domain Socket (以下简称 DS) 更为高效。根据测试反馈，速度超过 50Mbps 时，通常会有较明显的性能差距。
 
+普通使用情况下这个差距并不大，新版linux对本地回环(Loopback Address)有特殊优化，不必担心性能问题。
+
 DS 仅限分流器与服务端 V2Ray 连接，客户端连接服务器仍然使用 TCP, 即：
 ```text
               TLS over TCP                DS
